@@ -1,8 +1,19 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
+
   <groupId>nz.ac.massey.cs.251</groupId>
   <artifactId>t5</artifactId>
   <version>0.0.1</version>
+
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
 
   <dependencies>
     <dependency>
@@ -17,28 +28,24 @@
       <scope>runtime</scope>
     </dependency>
   </dependencies>
+
   <build>
-    <pluginManagement>
-      <plugins>
-        <!--
-            If we e.g. execute on JDK 1.7, we should compile for Java 7 to get
-            the same (or higher) JAXB API version as used during the xjc execution.
-        -->
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-compiler-plugin</artifactId>
-          <configuration>
-            <source>1.8</source>
-            <target>1.8</target>
-          </configuration>
-        </plugin>
-      </plugins>
-    </pluginManagement>
     <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+          <encoding>UTF-8</encoding>
+        </configuration>
+      </plugin>
+
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>jaxb2-maven-plugin</artifactId>
-	<version>2.5.0</version>
+        <version>2.5.0</version>
         <executions>
           <execution>
             <id>xjc</id>
@@ -48,8 +55,11 @@
           </execution>
         </executions>
         <configuration>
-          <!-- The package of your generated sources -->
-          <packageName>com.example.myschema</packageName>
+          <!-- The package of generated sources -->
+          <packageName>nz.ac.massey.cs.sdc.parsers</packageName>
+          <sources>
+            <source>src/main/xsd/rss-2_0.xsd</source>
+          </sources>
           <outputDirectory>src/main/java</outputDirectory>
           <generateEpisode>false</generateEpisode>
           <clearOutputDir>false</clearOutputDir>

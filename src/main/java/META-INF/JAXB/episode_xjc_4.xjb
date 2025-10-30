@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jaxb:bindings version="2.1" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb">
+  <!--
+
+此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.3.2 生成的
+请访问 <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
+在重新编译源模式时, 对此文件的所有修改都将丢失。
+生成时间: 2025.10.28 时间 08:32:56 PM CST 
+
+  -->
+  <jaxb:bindings scd="x-schema::">
+    <jaxb:schemaBindings map="false">
+      <jaxb:package name="nz.ac.massey.cs.sdc.parsers"/>
+    </jaxb:schemaBindings>
+    <jaxb:bindings scd="rss">
+      <jaxb:class ref="nz.ac.massey.cs.sdc.parsers.Rss"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~RssChannel">
+      <jaxb:class ref="nz.ac.massey.cs.sdc.parsers.RssChannel"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~RssItem">
+      <jaxb:class ref="nz.ac.massey.cs.sdc.parsers.RssItem"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~SkipHoursList">
+      <jaxb:class ref="nz.ac.massey.cs.sdc.parsers.SkipHoursList"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~SkipDaysList">
+      <jaxb:class ref="nz.ac.massey.cs.sdc.parsers.SkipDaysList"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~Category">
+      <jaxb:class ref="nz.ac.massey.cs.sdc.parsers.Category"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~Image">
+      <jaxb:class ref="nz.ac.massey.cs.sdc.parsers.Image"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~Cloud">
+      <jaxb:class ref="nz.ac.massey.cs.sdc.parsers.Cloud"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~TextInput">
+      <jaxb:class ref="nz.ac.massey.cs.sdc.parsers.TextInput"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~Source">
+      <jaxb:class ref="nz.ac.massey.cs.sdc.parsers.Source"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~Enclosure">
+      <jaxb:class ref="nz.ac.massey.cs.sdc.parsers.Enclosure"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~Guid">
+      <jaxb:class ref="nz.ac.massey.cs.sdc.parsers.Guid"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~SkipDay">
+      <jaxb:typesafeEnumClass ref="nz.ac.massey.cs.sdc.parsers.SkipDay"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~CloudProtocol">
+      <jaxb:typesafeEnumClass ref="nz.ac.massey.cs.sdc.parsers.CloudProtocol"/>
+    </jaxb:bindings>
+  </jaxb:bindings>
+</jaxb:bindings>
+
